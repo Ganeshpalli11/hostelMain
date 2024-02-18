@@ -14,8 +14,10 @@
 	<name>SmartStay2</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
-	</properties>
+    <java.version>11</java.version>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
+</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
