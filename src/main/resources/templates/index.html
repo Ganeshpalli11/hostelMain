@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Index page</h1>
+<form action="/VerifyEmail" method="GET">
+    <label for="FRIST NAME">FRIST NAME :-</label>
+    <input type="text" name="name"  required><br>
+    <label for="SUR NAME">SUR NAME:-</label>
+    <input type="text" name="sur_name" required><br>
+    <!-- <label for="date">DOB:-</label> -->
+    <!-- <input type="date" name="date" required><br> -->
+    <label >GENDER:-</label>
+    <label for="M">M:-</label>
+    <input type="radio" name="gender" value="M">
+    <label for="F">F:-</label>
+    <input type="radio" name="gender" value="F" >
+    <label for="OTHERS">OTHERS:-</label>
+    <input type="radio" value="OTHERS" name="gender" required><br>
+    <label for="aadhar">AADAR:-</label>
+    <input type="number" name="adhar" required><br>
+    <label for="address">ADDRESS:-</label>
+    <textarea name="address"  ></textarea><br>
+    <label for="email">EMAIL:-</label>
+    <input type="email" name="email" required ><br>
+    <label for="number">MOBILE NUMBER:-</label>
+    <input type="tel" name="number" required ><br>
+    <label for="password">PASSWORD:-</label>
+    <input type="password" name="password" required><br>
+    <label for="confirm_password">CONFIRM PASSWORD:-</label>
+    <input type="password" name="confirm_password" required ><br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
