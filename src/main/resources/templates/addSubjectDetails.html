@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subject Details</title>
+</head>
+<body>
+    <h2>Add Subject Details</h2>
+    <form action="/addSubDetails" method="post">
+        <!-- Display the list of subjects in a dropdown menu -->
+        <label for="subject">Select Subject:</label>
+        <select id="subject" name="subject">
+            <option th:each="subject : ${subjects}" th:value="${subject.id}" th:text="${subject.subname}"></option>
+        </select>
+        <br><br>
+        <label for="youtubeUrl">YouTube URL:</label>
+        <input type="text" id="youtubeUrl" name="youtubeUrl" required>
+        <br><br>
+        <label for="topic">Topic Name:</label>
+        <input type="text" id="topic" name="topic" required>
+        <br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

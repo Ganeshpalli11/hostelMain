@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/13141295/pexels-photo-13141295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    backdrop-filter: blur(4px);
+    background-color: rgba(100, 100, 100, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 7, 7, 0.995);
+    width: 300px;
+    border: none;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+form label {
+    color: rgb(4, 0, 10);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    font: bold;
+    text-shadow: 0 0 10px #050505b8;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #080808;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(5, 5, 5);
+}
+
+input[type="submit"] {
+    background-color: #080808;
+    color: rgb(248, 246, 246);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background-color: #0cf374;
+    color: #020202;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    </style>
+</head>
+<body>
+
+    <Form action="/Login" method="get">
+        <label for="email">UserName:</label>
+        <input type="email" name="email"></input>
+        <label for="password">Password:</label>
+        <input type="password" name="pass"></input>
+        <input type="submit">
+        </Form>
+        
+    
+</body>
+</html>

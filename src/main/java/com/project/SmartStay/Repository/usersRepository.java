@@ -6,4 +6,6 @@ import com.project.SmartStay.entity.Users;
 
 public interface usersRepository extends JpaRepository<Users,Integer>{
 
+	Users getByEmail(String email);
+
 }

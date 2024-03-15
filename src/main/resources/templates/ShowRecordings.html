@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recordings</title>
+</head>
+<body>
+    <h2>All Recordings</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>YouTube Video</th>
+                <th>Topic</th>
+                <th>Date</th>
+                <th>Subject</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the list of recordings and display each recording -->
+            <tr th:each="recording : ${recordings}">
+                <td th:text="${recording.id}"></td>
+                
+                <td th:text="${recording.topic}"></td>
+                <td th:text="${recording.date}"></td>
+                <td th:text="${recording.subject.subname}"></td>
+                <td>
+                    <form th:action="@{/showRecording}" method="post">
+                        <input type="hidden" name="videoId" th:value="${recording.id}" />
+                        <button type="submit">Watch Recording</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

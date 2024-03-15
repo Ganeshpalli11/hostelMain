@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single Recording</title>
+</head>
+<body>
+	<h2>Single Recording</h2>
+	<h3>YouTube Video</h3>
+	<div th:utext="${recording.youtubeUrl}"></div>
+
+	<h3>
+		Topic: <span th:text="${recording.topic}"></span>
+	</h3>
+	<h3>
+		Date: <span th:text="${recording.date}"></span>
+	</h3>
+	<h3>
+		Subject: <span th:text="${recording.subject.subname}"></span>
+	</h3>
+</body>
+</html>
